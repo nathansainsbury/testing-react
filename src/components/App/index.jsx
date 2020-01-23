@@ -7,6 +7,7 @@ class App extends React.Component{
     constructor(props){
         super(props);
         this.state = {
+            // data
             people: [
                 {
                     name: 'Harper',
@@ -40,11 +41,23 @@ class App extends React.Component{
             <div className='container'>
                 {/* <Search /> */}
                 <div className='row'>
-                    {this.state.people  .map(person => <Card name={person.name} age={person.age} gender={person.gender} url={person.img}/>)}
+                    {/* loop through the people array (this.state.people) and create a Card component with the relavant properties */}
+                    {this.state.people.map(person => <Card name={person.name} age={person.age} gender={person.gender} url={person.img}/>)}
                 </div>
             </div>
         );
     }
 }
+
+// { } === curly braces
+// [] === square brackets / braces
+
+// | === pipe
+// ; === semi colon
+// : === colon
+
+// * === asterisk(s)
+// & === and/ampasan
+// ~ === tilda
 
 export default App;

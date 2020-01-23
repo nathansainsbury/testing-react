@@ -16,10 +16,14 @@ export default class extends React.Component{
     getInformation(){
         const { postcode } = this.state;
 
+        // used to make the http requests
         axios.get('https://api.postcodes.io/postcodes/' + postcode).then(res => {
+
+            // updates the state which causes the component to re render (i.e call render again)
             this.setState({
                 data: res.data.result
             });
+
         }).catch(err => {
 
         })
@@ -27,6 +31,7 @@ export default class extends React.Component{
     
 
     handleChange(event){
+        // when someone types, set the state and change this.state.postcode to event.target.value (which is the value in the input field)
         this.setState({
             postcode: event.target.value
         });

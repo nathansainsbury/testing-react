@@ -1,11 +1,15 @@
 import React from 'react';
 
+
+// when we pass props into the component, we can access them via this.props.{propname}
+// <Card name='nathan' /> this.props.name // nathan
 class Card extends React.Component{
 
     constructor(props){
         super(props);
     }
 
+    // when the component "mounts" what is rendered is displayed on the screen
     render(){
         return(
             <div className='col-lg-6'>
